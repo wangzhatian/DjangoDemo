@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta   http-equiv="content-type" content="text/html charset=UTF-8"/>
+<head>
+    <meta   http-equiv="content-type" content="text/html charset=UTF-8"/>
+    <title>金通测试Login</title>
+    <style>body{text-align: center}</style>
+</head>
+<body>
+<div>
+    <font size="1">
+        <h1>自动化平台</h1>
+    </font>
+</div>
+<form method="post" action="/login/">
+    {% csrf_token %}
+    <br><a>&nbsp;&nbsp;用户名：</a><input  name="username" type="text" placeholder="test">
+    <br><br><a>&nbsp;&nbsp;密&nbsp;&nbsp;码：</a><input name="password" type="password" placeholder="test123456">
+    <br>{{ error }}<br>
+    &nbsp;&nbsp;<button style="width: 200px;height: 28px" id="submimt" type="submit">登录</button>
+</form>
+</body>
+</html>
